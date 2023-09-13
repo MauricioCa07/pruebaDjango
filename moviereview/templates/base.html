@@ -1,52 +1,27 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-
-    <body>
-        <nav class="navbar  navbar-expand-lg navbar-light bg-light mb-3">
-        <div class="container"
-            <a class="navbar-brand" href="{% url 'home' %}">Movies</a>
-            <button class="navbar-toggler" type="button" data-bstoggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" arialabel="Toggle navigation">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'news' %}">movies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class = "nav-link" href="{% url 'news' %}">News</a>
-                    <a class = "nav-link" href="#">Login</a>
-                    <a class = "nav-link" href="#">Sing up</a>
+                    <a class="nav-link" href="{% url 'news' %}">News</a>
+                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="#">Sign up</a>
                 </div>
             </div>
         </div>
-            <div class="container"
-                {% block content %}
-                {% endblock content %}
-        </nav>
-    </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
 </html>

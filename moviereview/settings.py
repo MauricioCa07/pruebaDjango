@@ -59,7 +59,7 @@ ROOT_URLCONF = 'moviereview.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'moviereviews/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'moviereview/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,8 +74,7 @@ TEMPLATES = [
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, "static"),
-    'moviereviews/static/',
-
+    'moviereview/static/',
 ]
 
 WSGI_APPLICATION = 'moviereview.wsgi.application'
